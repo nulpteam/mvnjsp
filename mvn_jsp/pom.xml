@@ -78,7 +78,7 @@
 					<server>mytomcat</server>
 					<path>/mvn_jsp</path>
 				</configuration>
-    	</plugin> -->
+    	</plugin> --> 
 
 
 
