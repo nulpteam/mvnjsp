@@ -8,10 +8,11 @@ import org.apache.log4j.Logger;
 public class LoginModel {
 	public static Logger log = Logger.getLogger(LoginModel.class);
 	private static Locale locale = new Locale("uk","UA");
-	private static ResourceBundle rb = ResourceBundle.getBundle("main.resources.lang",locale);
+	private static ResourceBundle rb = ResourceBundle.getBundle("lang",locale);
 	
 	public String getTitle()
 	{
+		log.info("Title is called");
 		return rb.getString("Who_are_you?");
 	}
 }
