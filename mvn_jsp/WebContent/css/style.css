@@ -1,0 +1,59 @@
+body {
+		background-color: white;/*#686767 ;*/
+}
+
+#bg {
+	background-image: url('../images/background9.png');
+	background-repeat: no-repeat;
+	height: 600px;
+	width: 1000px;
+	margin: -12px auto;
+}
+
+#login {
+	position: absolute;
+	width: 375;
+	height: 238px;
+	margin: 300px 620px;
+	/*border: 3px solid red;*/
+}
+
+
+
+    .classname {
+    -webkit-transition:All 0.8485s linear;
+    -moz-transition:All 0.8485s linear;
+    -o-transition:All 0.8485s linear;
+    -webkit-transform: rotate(0deg) scale(0.865) skew(1deg) translate(-6px);
+    -moz-transform: rotate(0deg) scale(0.865) skew(1deg) translate(-6px);
+    -o-transform: rotate(0deg) scale(0.865) skew(1deg) translate(-6px);
+    }
+    .classname:hover{
+    -webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(-6px);
+    -moz-transform: rotate(0deg) scale(1) skew(1deg) translate(-6px);
+    -o-transform: rotate(0deg) scale(1) skew(1deg) translate(-6px);
+    }
+
+
+
+
+
+#text {
+	border: 2px solid green;
+	position: absolute;
+	left: 4%;
+	top: 16%;
+	color: red;
+	width: 50%;
+	height: 30%;
+	font-size: 14pt;
+	/* Safari */
+	-webkit-transform: rotate(11deg);
+	/* Firefox */
+	-moz-transform: rotate(15deg);
+	/* IE */
+	-ms-transform: rotate(-90deg);
+	/* Opera */
+	-o-transform: rotate(-90deg);
+	-webkit-transform: rotate(11deg)
+}
