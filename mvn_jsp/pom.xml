@@ -7,67 +7,60 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>mvn_jsp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+  		<dependency>
+      		<groupId>junit</groupId>
+      		<artifactId>junit</artifactId>
+      		<version>3.8.1</version>
+      		<scope>test</scope>
+   		</dependency>
     
     
-    <dependency>
-    	<groupId>org.apache.maven.plugins</groupId>
-    	<artifactId>maven-compiler-plugin</artifactId>
-    	<version>2.5.1</version>
-    	<type>maven-plugin</type>
-    </dependency>
-    
-    
-   <!--  <dependency>
-    	<groupId>org.codehaus.plexus</groupId>
-    	<artifactId>plexus-utils</artifactId>
-    	<version>3.0.4</version>
-    </dependency>
-        -->
-    
-    
-    <dependency>
-    	<groupId>org.apache.tomcat</groupId>
-    	<artifactId>tomcat-servlet-api</artifactId>
-    	<version>7.0.29</version>
-    </dependency>
- 
-    
-    <dependency>
-    	<groupId>org.slf4j</groupId>
-    	<artifactId>slf4j-api</artifactId>
-    	<version>1.6.6</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.slf4j</groupId>
-    	<artifactId>slf4j-log4j12</artifactId>
-    	<version>1.6.6</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.slf4j</groupId>
-    	<artifactId>slf4j-simple</artifactId>
-    	<version>1.6.6</version>
-    </dependency>
-  </dependencies>
-  <build>
-    <finalName>mvn_jsp</finalName>
-    <plugins>
-    	<!-- <plugin>
+    	<dependency>
     		<groupId>org.apache.maven.plugins</groupId>
     		<artifactId>maven-compiler-plugin</artifactId>
     		<version>2.5.1</version>
-    	</plugin>
-    	<plugin>
-    		<groupId>org.codehaus.plexus</groupId>
-    		<artifactId>plexus-maven-plugin</artifactId>
-    		<version>1.3.8</version>
-    	</plugin> -->
+    		<type>maven-plugin</type>
+    	</dependency>
+        
+    	<dependency>
+    		<groupId>org.apache.tomcat</groupId>
+    		<artifactId>tomcat-servlet-api</artifactId>
+    		<version>7.0.29</version>
+    	</dependency>
+ 
+    
+    	<dependency>
+    		<groupId>org.slf4j</groupId>
+    		<artifactId>slf4j-api</artifactId>
+    		<version>1.6.6</version>
+    	</dependency>
+    	
+    	<dependency>
+    		<groupId>org.slf4j</groupId>
+    		<artifactId>slf4j-log4j12</artifactId>
+    		<version>1.6.6</version>
+    	</dependency>
+    
+    	<dependency>
+    		<groupId>org.slf4j</groupId>
+    		<artifactId>slf4j-simple</artifactId>
+    		<version>1.6.6</version>
+    	</dependency>
+    	
+    	<dependency>
+    		<groupId>javax.servlet.jsp.jstl</groupId>
+    		<artifactId>javax.servlet.jsp.jstl-api</artifactId>
+    		<version>1.2.1</version>
+    	</dependency>
+  </dependencies>
+  
+  <build>
+  		<finalName>mvn_jsp</finalName>
+  			<plugins>
+  	  	
 
     	<!-- <plugin>
     		<groupId>org.codehaus.mojo</groupId>
@@ -80,17 +73,15 @@
 				</configuration>
     	</plugin> --> 
 
-
-
     	<plugin>
-    		<groupId>org.apache.tomcat.maven</groupId>
-    		<artifactId>tomcat7-maven-plugin</artifactId>
-    		<version>2.0-beta-1</version>
-    		<configuration>
-    		    <server>mytomcat</server>
-    			<url>http://localhost:8080/manager/text</url>
-    		</configuration>
-    	</plugin>
+    		<groupId>org.codehaus.mojo</groupId>
+    		<artifactId>tomcat-maven-plugin</artifactId>
+    		<version>1.1</version>
+   			<configuration>
+                 <url>http://localhost:8080/manager/text</url>
+                  <server>mytomcat</server>
+            </configuration>
+  		</plugin>
     	
     	<plugin>
     		<groupId>org.apache.maven.plugins</groupId>
