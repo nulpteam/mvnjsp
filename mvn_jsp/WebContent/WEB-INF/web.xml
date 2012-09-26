@@ -12,4 +12,18 @@
     <servlet-name>inner</servlet-name>
     <url-pattern>/demo</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <servlet-name>inner_login</servlet-name>
+    <servlet-class>com.bobik.mvn_jsp.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>inner_login</servlet-name>
+    <url-pattern>/login.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
 </web-app>
