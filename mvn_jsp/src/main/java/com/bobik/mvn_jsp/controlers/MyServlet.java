@@ -1,4 +1,4 @@
-package com.bobik.mvn_jsp;
+package com.bobik.mvn_jsp.controlers;
 
 import java.io.IOException;
 
