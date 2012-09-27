@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.bobik.mvn_jsp.models.LoginModel;
+import com.bobik.mvn_jsp.models.impl.LoginModelDAOImpl;
 
 /**
  * Servlet implementation class Login
@@ -23,8 +23,9 @@ public class Login extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		LoginModel lm = new LoginModel();
+		LoginModelDAOImpl lm = new LoginModelDAOImpl();
 		request.setAttribute("title", lm.getTitle());
+		request.setAttribute("list", lm.getFromDB("SELECT * FROM test"));
 		RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
 		rd.forward(request, response);
 		log.error("forwarded");
