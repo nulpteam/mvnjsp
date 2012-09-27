@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import com.bobik.mvn_jsp.models.LoginModel;
 
 /**
@@ -17,7 +19,7 @@ import com.bobik.mvn_jsp.models.LoginModel;
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static Logger log = Logger.getLogger(Login.class);
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
@@ -25,6 +27,7 @@ public class Login extends HttpServlet {
 		request.setAttribute("title", lm.getTitle());
 		RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
 		rd.forward(request, response);
+		log.error("forwarded");
 	}
 
 }
