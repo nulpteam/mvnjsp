@@ -1,4 +1,4 @@
-package com.bobik;
+package com.bobik.mvn_jsp.models;
 
 public class TestTable {
 	private String id;

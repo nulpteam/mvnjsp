@@ -15,5 +15,11 @@
 			<img src="img/loginform.png">
 		</div>
 	</div>
+	<div>
+		<c:forEach 	var="p" items="${var}">
+			String <c:out value="${p.id}"/>
+			String <c:out value="${p.name}"/>
+		</c:forEach>
+	</div>
 </body>
 </html>

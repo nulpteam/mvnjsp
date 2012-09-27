@@ -19,7 +19,7 @@ public class LoginModelDAOImpl implements LoginModelDAO{
 	private static Logger log = Logger.getLogger(LoginModelDAOImpl.class);
 	private static Locale locale = new Locale("uk", "UA");
 	private static ResourceBundle rb = ResourceBundle.getBundle("lang", locale);
-	private static ApplicationContext ctx = new ClassPathXmlApplicationContext("springconfig.xml");
+	
 	
 	
 	private JdbcTemplate jdbcTemplate = null;
