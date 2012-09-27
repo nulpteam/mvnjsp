@@ -1,6 +1,7 @@
 package com.bobik.mvn_jsp.controlers;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.bobik.mvn_jsp.models.LoginModelDAO;
+import com.bobik.mvn_jsp.models.TestTable;
 import com.bobik.mvn_jsp.models.impl.LoginModelDAOImpl;
 
 /**
@@ -23,15 +25,22 @@ import com.bobik.mvn_jsp.models.impl.LoginModelDAOImpl;
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger(Login.class);
-	private static ApplicationContext ctx = new ClassPathXmlApplicationContext("springconfig.xml");
+	ApplicationContext ctx = new ClassPathXmlApplicationContext("springconfig.xml");
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
+		//System.out.println("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq");
 		LoginModelDAO l = (LoginModelDAO)ctx.getBean("ttt");
-		
-		LoginModelDAOImpl lm = new LoginModelDAOImpl();
-		request.setAttribute("title", lm.getTitle());
-		request.setAttribute("list", l.getFromDB("SELECT * FROM test"));
+		//LoginModelDAOImpl lm = new LoginModelDAOImpl();
+		request.setAttribute("title", l.getTitle());
+		List<TestTable> tt = l.getFromDB("SELECT * FROM test");
+		if(tt!=null){log.info("tt!=null");
+			/*for(TestTable r:tt)
+			{ 
+				log.info("mytest++++++++++++++++++++++++++"+r.getId()+" "+r.getName());
+			}*/
+		}
+		request.setAttribute("list",tt );
 		RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
 		
 		rd.forward(request, response);

@@ -13,10 +13,18 @@
 	<div id="bg">
 		<div id="login"class="classname">
 			<img src="img/loginform.png">
+			<form action="FormControler" method="post">
+				<div class="loginFromFields">
+					<input type="text" name="login"><br>
+					<input type="password" name="pass"><br>
+					<input type="submit">
+				</div>
+			</form>
 		</div>
 	</div>
-	<div>
-		<c:forEach 	var="p" items="${var}">
+	<div style="color:white">
+	
+		<c:forEach  items="${list}" 	var="p">
 			String <c:out value="${p.id}"/>
 			String <c:out value="${p.name}"/>
 		</c:forEach>

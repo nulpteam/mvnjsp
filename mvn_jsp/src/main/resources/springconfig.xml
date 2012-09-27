@@ -15,7 +15,7 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     <property name="dataSource" ref="dataSource"/>
 </bean>
 
-<bean id="ttt" class="com.bobik.mvn_jsp.LoginModelDAOImpl">
+<bean id="ttt" class="com.bobik.mvn_jsp.models.impl.LoginModelDAOImpl">
     <property name="jdbcTemplate" ref="jdbcTemplate"/>
 </bean>
 

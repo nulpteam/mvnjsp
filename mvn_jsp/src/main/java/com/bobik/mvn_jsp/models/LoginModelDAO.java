@@ -3,5 +3,6 @@ package com.bobik.mvn_jsp.models;
 import java.util.List;
 
 public interface LoginModelDAO {
-List<String> getFromDB(String sql);
+List<TestTable> getFromDB(String sql);
+String getTitle();
 }

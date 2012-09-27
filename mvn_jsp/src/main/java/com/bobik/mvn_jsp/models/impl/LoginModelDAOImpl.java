@@ -7,8 +7,6 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 import org.apache.log4j.Logger;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -39,7 +37,7 @@ public class LoginModelDAOImpl implements LoginModelDAO{
 
 	
 
-	public List<String> getFromDB(String sql) {
+	public List<TestTable> getFromDB(String sql) {
 		List <TestTable> ttt = jdbcTemplate.query(sql, new  RowMapper<TestTable>(){
 
 			public TestTable mapRow(ResultSet rs, int arg1) throws SQLException {
@@ -52,6 +50,6 @@ public class LoginModelDAOImpl implements LoginModelDAO{
 			}
 			});
 		
-		return null;
+		return ttt;
 	}
 }

@@ -2,6 +2,8 @@ package com.bobik.mvn_jsp.models;
 
 public class TestTable {
 	private String id;
+	private String name;
+	
 	public String getId() {
 		return id;
 	}
@@ -14,5 +16,5 @@ public class TestTable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	private String name;
+	
 }
