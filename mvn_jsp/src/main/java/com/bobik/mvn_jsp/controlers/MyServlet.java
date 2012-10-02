@@ -21,7 +21,7 @@ public class MyServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		RequestDispatcher rd = request.getRequestDispatcher("jsp/demo.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/demo.jsp");
 		request.setAttribute("var", new int[]{1,2,3,4,5,6,777});
 		rd.forward(request, response);
 		

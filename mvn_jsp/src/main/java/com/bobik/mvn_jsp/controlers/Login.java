@@ -41,7 +41,7 @@ public class Login extends HttpServlet {
 			}*/
 		}
 		request.setAttribute("list",tt );
-		RequestDispatcher rd = request.getRequestDispatcher("jsp/login.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/login.jsp");
 		
 		rd.forward(request, response);
 		log.error("forwarded");
